@@ -11,7 +11,7 @@ with sync_playwright() as p:
     #pobranie odpowiedzi z zapytania GET jako json
     result = response.json()
     name = result["name"]
-    print(f"Uzytkowniik nazywa się {name}.")
+    print(f"Uzytkownik nazywa się {name}.")
 
 
 
@@ -24,6 +24,8 @@ with sync_playwright() as p:
     page.fill("#APjFqb", name)
     page.click("input[value='Szukaj w Google']")
     print(f"Wyniki wyszukiwania dla {name}")
+
+    page.wait_for_timeout(10000)
 
     browser.close()
 
