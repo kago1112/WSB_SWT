@@ -16,8 +16,16 @@ with sync_playwright() as p:
 
     id = body["id"] #spodziewamy się 1
     userid = body["userId"] #spodziewamy się 1
+    title = body["title"]
+    body = body["body"]
+
     print(f"Id to {id}.")
     print(f"UserId to {userid}.")
+    print(f"Title to {title}.")
+    print(f"Body to {body}.")
 
     assert id == 1
     assert userid == 1
+
+    print(f"Typ title to string: ", isinstance(title,str))
+    assert isinstance(title, str)
