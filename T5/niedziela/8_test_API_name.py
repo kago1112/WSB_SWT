@@ -22,10 +22,9 @@ with sync_playwright() as p:
     page.goto("https://www.google.pl/?hl=pl")
     page.click("#L2AGLb")
     page.fill("#APjFqb", name)
-    page.click("input[value='Szukaj w Google']")
+    page.click("input[value='Szukaj w Google']")  #page.press("textarea", 'Enter')
     print(f"Wyniki wyszukiwania dla {name}")
 
     page.wait_for_timeout(10000)
 
     browser.close()
-
