@@ -37,6 +37,9 @@ wait = WebDriverWait(driver, 10, 0.5)
 
 # warunek oczekiwania
 wait.until(EC.visibility_of_element_located(('xpath', '//*[@id="leftmenuinnerinner"]/a[43]')))
+# ewentualnie:
+#   lambda x:
+#   wait.until(len(x.find_elements('xpath', '//*[@id="leftmenuinnerinner"]/a[43]')))
 
 # menu - 'input types'
 menuInput = driver.find_element('xpath', '//*[@id="leftmenuinnerinner"]/a[43]')
