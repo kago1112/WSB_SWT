@@ -6,10 +6,8 @@ from selenium.webdriver.common.by import By
 
 @pytest.fixture
 def driver():
-    # inicjalizacja przeglądarki Chrome
     driver = webdriver.Chrome()
     yield driver
-    # zamkniecie przegladarki
     driver.quit()
 
 # test
