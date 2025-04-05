@@ -1,3 +1,15 @@
+#TESTER_WSB_MERITO
+
+T4
+
+
+T5
+
+
+T7
+
+
+T10
 Repozytorium służy do nauki automatyzacji procesów CI/CD z wykorzystaniem:
 
 - **GitHub Actions** – do definiowania i uruchamiania pipeline'ów CI/CD,
