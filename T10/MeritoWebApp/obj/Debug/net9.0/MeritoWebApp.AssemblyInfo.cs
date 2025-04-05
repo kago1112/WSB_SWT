@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MeritoWebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b963888314deefdb2eb5a755548057c5b56dc71")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3886c0fe0f9bc8a43a2803008e3ca26e69dc19df")]
 [assembly: System.Reflection.AssemblyProductAttribute("MeritoWebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MeritoWebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
