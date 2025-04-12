@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on darwin)" generated="2025-04-12T14:58:39.939918" rpa="false" schemaversion="5">
+<suite id="s1" name="PythonIntegration" source="/Users/katarzynagolawska/WSB_SWT/T8/sobota/8/PythonIntegration.robot">
+<test id="s1-t1" name="Test funkcji Python greet" line="5">
+<kw name="Greet" owner="MyLib">
+<msg time="2025-04-12T14:58:40.040582" level="INFO">${msg} = Hello, Marcin!</msg>
+<var>${msg}</var>
+<arg>Marcin</arg>
+<status status="PASS" start="2025-04-12T14:58:40.040115" elapsed="0.000551"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${msg}</arg>
+<arg>Hello, Marcin!</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-04-12T14:58:40.042368" elapsed="0.000434"/>
+</kw>
+<status status="PASS" start="2025-04-12T14:58:40.038828" elapsed="0.004271"/>
+</test>
+<test id="s1-t2" name="Test funkcji Python add" line="9">
+<kw name="Add" owner="MyLib">
+<msg time="2025-04-12T14:58:40.048816" level="INFO">${result} = 12</msg>
+<var>${result}</var>
+<arg>5</arg>
+<arg>7</arg>
+<status status="PASS" start="2025-04-12T14:58:40.045018" elapsed="0.003946"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-04-12T14:58:40.055115" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${result}</arg>
+<arg>12</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-04-12T14:58:40.054667" elapsed="0.000635"/>
+</kw>
+<status status="PASS" start="2025-04-12T14:58:40.044251" elapsed="0.011426"/>
+</test>
+<test id="s1-t3" name="Python inline sample" line="13">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-12T14:58:40.064200" level="INFO">${lista} = [0, 1, 4, 9, 16]</msg>
+<var>${lista}</var>
+<arg>[x*x for x in range(5)]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-12T14:58:40.057307" elapsed="0.007003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-12T14:58:40.065176" level="INFO">[0, 1, 4, 9, 16]</msg>
+<arg>${lista}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-12T14:58:40.064789" elapsed="0.000523"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-12T14:58:40.066286" level="INFO">${dict} = {'a': 1, 'b': 2}</msg>
+<var>${dict}</var>
+<arg>{"a": 1, "b": 2}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-12T14:58:40.065682" elapsed="0.000684"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-12T14:58:40.067039" level="INFO">{'a': 1, 'b': 2}</msg>
+<arg>${dict}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-12T14:58:40.066717" elapsed="0.000444"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-12T14:58:40.068478" level="INFO">${random_mod} = 6</msg>
+<var>${random_mod}</var>
+<arg>__import__('random').randint(1, 10)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-12T14:58:40.067486" elapsed="0.001245"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-12T14:58:40.069822" level="FAIL">Evaluating expression 6 failed: TypeError: Expression must be string, got integer.</msg>
+<var>${num}</var>
+<arg>${random_mod}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="FAIL" start="2025-04-12T14:58:40.069138" elapsed="0.001183">Evaluating expression 6 failed: TypeError: Expression must be string, got integer.</status>
+</kw>
+<status status="FAIL" start="2025-04-12T14:58:40.056166" elapsed="0.014786">Evaluating expression 6 failed: TypeError: Expression must be string, got integer.</status>
+</test>
+<status status="FAIL" start="2025-04-12T14:58:39.945170" elapsed="0.126426"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="PythonIntegration" id="s1" pass="2" fail="1" skip="0">PythonIntegration</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
