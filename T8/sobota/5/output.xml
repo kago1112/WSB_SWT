@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on darwin)" generated="2025-04-12T12:22:24.192794" rpa="false" schemaversion="5">
+<suite id="s1" name="Var" source="/Users/katarzynagolawska/WSB_SWT/T8/sobota/5/var.robot">
+<test id="s1-t1" name="Test zmiennej" line="5">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Uzytkownik: ${USER}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-12T12:22:24.265916" elapsed="0.000563"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${USER}</arg>
+<arg>Kasia</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-04-12T12:22:24.267078" elapsed="0.000594"/>
+</kw>
+<status status="PASS" start="2025-04-12T12:22:24.264608" elapsed="0.005136"/>
+</test>
+<status status="PASS" start="2025-04-12T12:22:24.200703" elapsed="0.069743"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Var" id="s1" pass="1" fail="0" skip="0">Var</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

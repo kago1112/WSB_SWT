@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on darwin)" generated="2025-04-12T11:22:24.311140" rpa="false" schemaversion="5">
+<suite id="s1" name="Len" source="/Users/katarzynagolawska/WSB_SWT/T8/sobota/3/len.robot">
+<test id="s1-t1" name="String Length Test Postive" line="5">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-12T11:22:24.411915" level="INFO">${text} = Hello, World!</msg>
+<var>${text}</var>
+<arg>Hello, World!</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-12T11:22:24.411304" elapsed="0.000686"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-12T11:22:24.423275" level="INFO">${length} = 13</msg>
+<var>${length}</var>
+<arg>len("${text}")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-12T11:22:24.414636" elapsed="0.008754"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2025-04-12T11:22:24.424469" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${length}</arg>
+<arg>13</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2025-04-12T11:22:24.424037" elapsed="0.000642"/>
+</kw>
+<doc>Test the length of a string</doc>
+<status status="PASS" start="2025-04-12T11:22:24.407420" elapsed="0.018691"/>
+</test>
+<test id="s1-t2" name="String Length Test Negative" line="11">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-12T11:22:24.440333" level="INFO">${text} = Hello, World!</msg>
+<var>${text}</var>
+<arg>Hello, World!</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-12T11:22:24.440044" elapsed="0.000345"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-12T11:22:24.441251" level="INFO">${length} = 13</msg>
+<var>${length}</var>
+<arg>len("${text}")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-12T11:22:24.440796" elapsed="0.000505"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2025-04-12T11:22:24.442209" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2025-04-12T11:22:24.442412" level="FAIL">13.0 != 15.0</msg>
+<arg>${length}</arg>
+<arg>15</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="FAIL" start="2025-04-12T11:22:24.441785" elapsed="0.000858">13.0 != 15.0</status>
+</kw>
+<doc>Test the length of a string</doc>
+<status status="FAIL" start="2025-04-12T11:22:24.437420" elapsed="0.005807">13.0 != 15.0</status>
+</test>
+<doc>Test for len function</doc>
+<status status="FAIL" start="2025-04-12T11:22:24.319666" elapsed="0.124870"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Len" id="s1" pass="1" fail="1" skip="0">Len</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

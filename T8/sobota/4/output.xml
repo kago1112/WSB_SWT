@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on darwin)" generated="2025-04-12T12:02:53.751404" rpa="false" schemaversion="5">
+<suite id="s1" name="Keyword" source="/Users/katarzynagolawska/WSB_SWT/T8/sobota/4/keyword.robot">
+<test id="s1-t1" name="Ilosc znakow z imieniem Positive" line="10">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-12T12:02:53.839291" level="INFO">${text} = Hello, Katarzyna!</msg>
+<var>${text}</var>
+<arg>Hello, ${imie}!</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-12T12:02:53.838911" elapsed="0.000442"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-12T12:02:53.841107" level="INFO">${length} = 17</msg>
+<var>${length}</var>
+<arg>len("${text}")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-12T12:02:53.839829" elapsed="0.001356"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2025-04-12T12:02:53.842446" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${length}</arg>
+<arg>17</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2025-04-12T12:02:53.842173" elapsed="0.000382"/>
+</kw>
+<doc>Sprawdzenie, czy komunikat wyświetli nasze imie z var</doc>
+<status status="PASS" start="2025-04-12T12:02:53.835938" elapsed="0.007069"/>
+</test>
+<test id="s1-t2" name="Wyswietlenie komunikatu z Twoim imieniem" line="16">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-12T12:02:53.846665" level="INFO">${length} = 18</msg>
+<var>${length}</var>
+<arg>len("${imie_i_nazwisko}")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-12T12:02:53.846216" elapsed="0.009296"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2025-04-12T12:02:53.856665" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${length}</arg>
+<arg>18</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2025-04-12T12:02:53.856094" elapsed="0.002180"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-12T12:02:53.859182" level="INFO">${text} = Hello, Katarzyna. Your name and surname have 18 characters.</msg>
+<var>${text}</var>
+<arg>Hello, ${imie}. Your name and surname have ${length} characters.</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-12T12:02:53.858692" elapsed="0.000557"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-12T12:02:53.859796" elapsed="0.000440"/>
+</kw>
+<doc>Sprawdzenie, czy komunikat wyświetli nasze imie z w konsoli</doc>
+<status status="PASS" start="2025-04-12T12:02:53.843971" elapsed="0.025457"/>
+</test>
+<doc>Test z keywordem z naszym imieniem</doc>
+<status status="PASS" start="2025-04-12T12:02:53.755832" elapsed="0.115371"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Keyword" id="s1" pass="2" fail="0" skip="0">Keyword</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
