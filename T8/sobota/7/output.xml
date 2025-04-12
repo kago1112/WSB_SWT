@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on darwin)" generated="2025-04-12T14:28:33.337123" rpa="false" schemaversion="5">
+<suite id="s1" name="Wylogowanie" source="/Users/katarzynagolawska/WSB_SWT/T8/sobota/7/wylogowanie.robot">
+<test id="s1-t1" name="LOGOWANIE I WYLOGOWANIE" line="12">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-12T14:28:34.317293" level="INFO">Opening browser 'Chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-12T14:28:34.316327" elapsed="7.552139"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>timeout=8</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-12T14:28:41.874636" elapsed="0.088523"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-12T14:28:41.966569" level="INFO">Typing text 'tomsmith' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${VALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T14:28:41.966086" elapsed="0.599582"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-12T14:28:42.566652" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T14:28:42.566240" elapsed="0.286678"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-12T14:28:42.855154" level="INFO">Clicking button 'css:.radius'.</msg>
+<arg>css:.radius</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T14:28:42.854660" elapsed="0.854049"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.flash.success</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-12T14:28:43.709542" elapsed="0.064528"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-04-12T14:28:43.775204" level="INFO">Clicking link 'css:a.button.secondary.radius'.</msg>
+<arg>css:a.button.secondary.radius</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T14:28:43.774895" elapsed="0.649055"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-12T14:28:44.426514" elapsed="0.430058"/>
+</kw>
+<doc>Test logowania i wylogowania</doc>
+<status status="PASS" start="2025-04-12T14:28:34.310567" elapsed="10.547345"/>
+</test>
+<doc>Testy logowania do aplikacji the-internet</doc>
+<status status="PASS" start="2025-04-12T14:28:33.341573" elapsed="11.518227"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Wylogowanie" id="s1" pass="1" fail="0" skip="0">Wylogowanie</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
