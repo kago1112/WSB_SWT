@@ -1,4 +1,3 @@
-import pytest
 from math_utils import add
 
 def test_add_two_numbers():
