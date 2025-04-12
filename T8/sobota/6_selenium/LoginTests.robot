@@ -17,7 +17,7 @@ UDANE LOGOWANIE
     Input Text   id:username    ${VALID_USERNAME}
     Input Text   id:password    ${VALID_PASSWORD}
     Click Button    css:.radius
-    Wait Until Element Is Visible   id:flash
+    Wait Until Element Is Visible   css:a[href="/logout"]
     Close Browser
 
 NIEUDANE LOGOWANIE
