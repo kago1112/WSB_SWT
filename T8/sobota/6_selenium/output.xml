@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on darwin)" generated="2025-04-12T13:55:15.040940" rpa="false" schemaversion="5">
+<suite id="s1" name="LoginTests" source="/Users/katarzynagolawska/WSB_SWT/T8/sobota/6_selenium/LoginTests.robot">
+<test id="s1-t1" name="UDANE LOGOWANIE" line="13">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-12T13:55:15.762428" level="INFO">Opening browser 'Chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-12T13:55:15.761921" elapsed="5.713077"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>timeout=8</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-12T13:55:21.480172" elapsed="3.373874"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-12T13:55:24.856921" level="INFO">Typing text 'tomsmith' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${VALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T13:55:24.854848" elapsed="0.676853"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-12T13:55:25.534783" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T13:55:25.532754" elapsed="0.269968"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-12T13:55:25.803854" level="INFO">Clicking button 'css:.radius'.</msg>
+<arg>css:.radius</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T13:55:25.803291" elapsed="0.930024"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:flash</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-12T13:55:26.735005" elapsed="0.387811"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-12T13:55:27.123597" elapsed="0.448299"/>
+</kw>
+<doc>Test logowania z poprawnymi danymi</doc>
+<status status="PASS" start="2025-04-12T13:55:15.760023" elapsed="11.812609"/>
+</test>
+<test id="s1-t2" name="NIEUDANE LOGOWANIE" line="23">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-12T13:55:27.585740" level="INFO">Opening browser 'Chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-12T13:55:27.578978" elapsed="8.183541"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>timeout=8</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-12T13:55:35.763589" elapsed="0.058892"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-12T13:55:35.823515" level="INFO">Typing text 'tomsmith' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${VALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T13:55:35.823059" elapsed="0.587891"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-12T13:55:36.412858" level="INFO">Typing text 'invalid_password' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${INVALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T13:55:36.412231" elapsed="0.271605"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-12T13:55:36.687807" level="INFO">Clicking button 'css:.radius'.</msg>
+<arg>css:.radius</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T13:55:36.685332" elapsed="0.745868"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-12T13:55:37.539280" level="INFO">Current page contains text 'Your password is invalid!'.</msg>
+<arg>Your password is invalid!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-04-12T13:55:37.433477" elapsed="0.106030"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-12T13:55:37.542063" elapsed="0.393843"/>
+</kw>
+<doc>Test logowania z niepoprawnymi danymi</doc>
+<status status="PASS" start="2025-04-12T13:55:27.575142" elapsed="10.362897"/>
+</test>
+<doc>Testy logowania do aplikacji the-internet</doc>
+<status status="PASS" start="2025-04-12T13:55:15.047186" elapsed="22.892592"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="LoginTests" id="s1" pass="2" fail="0" skip="0">LoginTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
