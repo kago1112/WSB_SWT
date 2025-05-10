@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on darwin)" generated="2025-04-13T09:49:30.870109" rpa="false" schemaversion="5">
+<suite id="s1" name="Api Test" source="/Users/katarzynagolawska/WSB_SWT/T8/9/api_test.robot">
+<test id="s1-t1" name="Prykładowy GET na API" line="6">
+<kw name="GET">
+<msg time="2025-04-13T09:49:31.018395" level="FAIL">No keyword with name 'GET' found. Did you mean:
+    BuiltIn.Get Time</msg>
+<var>${response}</var>
+<arg>https://jsonplaceholder.typicode.com/posts/1</arg>
+<status status="FAIL" start="2025-04-13T09:49:31.018299" elapsed="0.000409">No keyword with name 'GET' found. Did you mean:
+    BuiltIn.Get Time</status>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${response}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2025-04-13T09:49:31.020447" elapsed="0.000107"/>
+</kw>
+<doc>Test GET na API</doc>
+<status status="FAIL" start="2025-04-13T09:49:31.013201" elapsed="0.007912">No keyword with name 'GET' found. Did you mean:
+    BuiltIn.Get Time</status>
+</test>
+<doc>Nasz pierwszy test aplikacji API</doc>
+<status status="FAIL" start="2025-04-13T09:49:30.873910" elapsed="0.149930"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Api Test" id="s1" pass="0" fail="1" skip="0">Api Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-04-13T09:49:31.008642" level="ERROR">Error in file '/Users/katarzynagolawska/WSB_SWT/T8/9/api_test.robot' on line 3: Importing library 'RequestsLibrary' failed: ModuleNotFoundError: No module named 'RequestsLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Users/katarzynagolawska/WSB_SWT/.venv/bin
+  /Library/Frameworks/Python.framework/Versions/3.13/lib/python313.zip
+  /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13
+  /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/lib-dynload
+  /Users/katarzynagolawska/WSB_SWT/.venv/lib/python3.13/site-packages</msg>
+</errors>
+</robot>
