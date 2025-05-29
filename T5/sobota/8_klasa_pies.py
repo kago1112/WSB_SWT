@@ -14,6 +14,8 @@ class Pies:
         # metoda: zwraca ludzki wiek psa
         return self.wiek * 7
     
+
+
 pies_1 = Pies("Reksio", 5)
 
 pies_1.szczekaj()  # oczekujemy: Reksio szczeka: Hau Hau!
@@ -22,4 +24,3 @@ print(pies_1.wiek)
 print(pies_1.przelicz_wiek())
 
 print(pies_1.szczekaj())
-

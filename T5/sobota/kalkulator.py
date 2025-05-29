@@ -24,7 +24,7 @@ class Kalkulator:
         return math.pow(self.a, self.b)
     
 
-kalkulator_1 = Kalkulator(10,2)
+kalkulator_1 = Kalkulator(float(input("Podaj pierwsza liczbe: ")), float(input("Podaj druga liczbe: ")))
 print(kalkulator_1.dodawanie())
 print(kalkulator_1.odejmowanie())
 print(kalkulator_1.mnozenie())
