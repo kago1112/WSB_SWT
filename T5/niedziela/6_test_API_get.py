@@ -3,12 +3,12 @@ from playwright.sync_api import sync_playwright
 with sync_playwright() as p:
     #utwórz kontekst API - inny niz przeglądarki
     request_context = p.request.new_context()
-    #wysyłamy zadanie GET do API
+    #wysyłamy ządanie GET do API
     response = request_context.get("https://jsonplaceholder.typicode.com/posts/1")
     #sprawdzamy status odpowiedzi
     status = response.status
 
-    print(f"Status odpowiedzi: {status}")
+    print(f"Status odpowiedzi to: {status}")
     assert status == 200
 
     body = response.json()
@@ -26,6 +26,13 @@ with sync_playwright() as p:
 
     assert id == 1
     assert userid == 1
+    assert title == "sunt aut facere repellat provident occaecati excepturi optio reprehenderit"
+    assert body == "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
 
-    print(f"Typ title to string: ", isinstance(title,str))
+    # sprawdzamy, czy tytuł jest stringiem
+    print("Typ title to string: ", isinstance(title,str))
     assert isinstance(title, str)
+
+    # sprawdzamy, czy id jest intergerem
+    print(f"Typ id to integer: ", isinstance(id, int))
+    assert isinstance(id, int)

@@ -8,11 +8,13 @@ with sync_playwright() as p:
     print(f"Status odpowiedzi: {status}")
     assert status == 200
 
-    result = response.json()
-    assert isinstance(result, list)
+    posts = response.json()   # pobieramy odpowiedź w formacie JSON
+    assert isinstance(posts, list)   # sprawdzamy, czy odpowiedź jest listą
     
-    if len(result) > 0:
-        print(f"W aplikacji znajduje sie {len(result)} postów.")
+    if len(posts) > 0:
+        print(f"W aplikacji znajduje sie {len(posts)} postów.")
 
         print(f"Sprawdzenie czy w aplikacji znajduje sie 100 postow...")
-        assert len(result) == 100
+        assert len(posts) == 100
+        if len(posts) == 100:
+            print("W aplikacji znajduje sie 100 postów.")
